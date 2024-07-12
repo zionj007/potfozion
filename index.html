@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ZeeAxis - Architectural Visualization</title>
+  </head>
+  <body>
+    <div class="parallax"></div>
+    <header>
+      <h1>ZeeAxis</h1>
+      <p>Masterpieces in Architectural Visualization</p>
+      <a id="admin-login-link" href="#">Admin Login</a>
+    </header>
+    <section id="admin-login-form" style="display: none">
+      <form id="login-form">
+        <input
+          type="password"
+          id="admin-password"
+          placeholder="Admin Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+    <section id="admin-upload-form" style="display: none">
+      <form id="upload-form">
+        <input
+          type="text"
+          name="project-title"
+          placeholder="Project Title"
+          required
+        />
+        <input
+          type="text"
+          name="project-description"
+          placeholder="Project Description"
+          required
+        />
+        <input type="file" name="project-media" required />
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+    <section class="projects">
+      <!-- Projects will be dynamically added here -->
+    </section>
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div id="modal-media"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
